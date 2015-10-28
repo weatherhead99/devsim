@@ -4,15 +4,5 @@ SET (CXX_SRCS
     MaterialDB.cc
 )
 
-INCLUDE_DIRECTORIES (
-     ../utility
-     ../Circuit
-     ../Geometry 
-     ../meshing
-     ../math
-     ../errorSystem
-     ../common_api
-     ${SQLITE3_INCLUDE}
-)
 
-ADD_LIBRARY (Data ${CXX_SRCS})
+ADD_LIBRARY (Data OBJECT ${CXX_SRCS})

@@ -5,12 +5,6 @@ SET (CXX_SRCS
     NodeKeeper.cc
 )
 
-INCLUDE_DIRECTORIES (
-    ../../utility
-    ../models/sources
-    ../../Data
-    ../../errorSystem
-    ../../common_api
-)
+include_directories(${CMAKE_SOURCE_DIR}/src/Circuit/models/sources)
 
-ADD_LIBRARY (circuitData ${CXX_SRCS})
+ADD_LIBRARY (circuitData OBJECT ${CXX_SRCS})

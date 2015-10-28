@@ -15,18 +15,6 @@ SET (CXX_SRCS
     EquationFunctions.cc
 )
 
-INCLUDE_DIRECTORIES (
-    ../utility
-    ../Geometry
-    ../math
-    ../models
-    ../Equation
-    ../Data
-    ../Circuit/data
-    ../errorSystem
-    ../MathEval
-    ../common_api
-    ${SYMDIFF_INCLUDE}
-)
 
-ADD_LIBRARY (AutoEquation ${CXX_SRCS})
+
+ADD_LIBRARY (AutoEquation OBJECT ${CXX_SRCS})

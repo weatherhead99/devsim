@@ -16,17 +16,5 @@ SET (CXX_SRCS
     MathEnum.cc
 )
 
-INCLUDE_DIRECTORIES (
-    ../utility
-    ../Geometry
-    ../Data
-    ../Circuit/data
-    ../Equation
-    ../math
-    ../errorSystem
-    ../MathEval
-    ../common_api
-    ${SUPERLU_INCLUDE}
-)
-
-ADD_LIBRARY (math ${CXX_SRCS})
+include_directories(${CMAKE_SOURCE_DIR}/src/Circuit/data/)
+ADD_LIBRARY (math OBJECT ${CXX_SRCS})

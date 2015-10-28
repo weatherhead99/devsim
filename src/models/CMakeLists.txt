@@ -25,14 +25,4 @@ SET (CXX_SRCS
     ParallelOpEqual.cc
 )
 
-INCLUDE_DIRECTORIES (
-    ../utility
-    ../Geometry
-    ../math
-    ../errorSystem
-    ../MathEval
-    ../myThread
-    ../common_api
-)
-
-ADD_LIBRARY (models ${CXX_SRCS})
+ADD_LIBRARY (models OBJECT ${CXX_SRCS})

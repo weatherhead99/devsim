@@ -10,25 +10,9 @@ SET (CXX_SRCS
     CheckFunctions.cc
 )
 
-INCLUDE_DIRECTORIES (
-    ../commands
-    ../common_api
-    ../Geometry
-    ../models
-    ../math
-    ../utility
-    ../errorSystem
-    ../AutoEquation
-    ../Equation
-    ../meshing
-    ../Data
-    ../Circuit/data
-    ../Circuit/models/sources
-    ../Circuit/models/ideal
-    ../GeomModels
-    ../MathEval
-)
+include_directories(${CMAKE_SOURCE_DIR}/src/Circuit/models/sources)
+include_directories(${CMAKE_SOURCE_DIR}/src/Circuit/models/ideal)
 
-ADD_LIBRARY (commands ${CXX_SRCS})
+ADD_LIBRARY (commands OBJECT ${CXX_SRCS})
 
 

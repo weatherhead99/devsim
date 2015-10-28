@@ -24,15 +24,6 @@ SET (CXX_SRCS
     AverageEdgeModel.cc
 )
 
-INCLUDE_DIRECTORIES (
-    ../utility
-    ../Geometry
-    ../math
-    ../models
-    ../errorSystem
-    ../Data
-    ../common_api
-)
 
-ADD_LIBRARY (GeomModels ${CXX_SRCS})
+ADD_LIBRARY (GeomModels OBJECT ${CXX_SRCS})
 

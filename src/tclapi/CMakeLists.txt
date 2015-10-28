@@ -24,7 +24,7 @@ INCLUDE_DIRECTORIES (
 )
 
 
-ADD_LIBRARY (tclapi_interpreter ${CXX_SRCS1})
-ADD_LIBRARY (tclapi_api ${CXX_SRCS2})
+ADD_LIBRARY (tclapi_interpreter SHARED ${CXX_SRCS1})
+ADD_LIBRARY (tclapi_api SHARED ${CXX_SRCS2})
 
 

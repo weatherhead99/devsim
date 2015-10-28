@@ -7,14 +7,7 @@ SET (CXX_SRCS
     MathPacket.cc
 )
 
-INCLUDE_DIRECTORIES (
-  ../utility
-  ../myThread
-  ../errorSystem
-  ../Data
-  ../common_api
-)
 
 
-ADD_LIBRARY (MathEval ${CXX_SRCS})
+ADD_LIBRARY (MathEval OBJECT  ${CXX_SRCS})
 

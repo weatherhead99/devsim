@@ -4,15 +4,6 @@ SET (CXX_SRCS
     InterfaceEquation.cc
 )
 
-INCLUDE_DIRECTORIES (
-    ../utility
-    ../Geometry 
-    ../models 
-    ../math
-    ../Circuit/data
-    ../errorSystem
-    ../GeomModels
-    ../common_api
-)
 
-ADD_LIBRARY (Equation ${CXX_SRCS})
+
+ADD_LIBRARY (Equation OBJECT ${CXX_SRCS})

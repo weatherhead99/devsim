@@ -5,12 +5,6 @@ SET (CXX_SRCS
   myThreadPool.cc
 )
 
-INCLUDE_DIRECTORIES (
-  ../utility
-  ../Data
-  ../errorSystem
-  ../common_api
-)
 
-ADD_LIBRARY (myThread ${CXX_SRCS})
+ADD_LIBRARY (myThread OBJECT ${CXX_SRCS})
 

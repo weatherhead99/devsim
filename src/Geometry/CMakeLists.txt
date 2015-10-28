@@ -15,15 +15,4 @@ SET (CXX_SRCS
     GeometryStream.cc
 )
 
-INCLUDE_DIRECTORIES (
-    ../utility
-    ../Equation 
-    ../models 
-     ../Geometry 
-     ../math 
-    ../errorSystem
-     ../common_api
-     ../Data
-)
-
-ADD_LIBRARY (Geometry ${CXX_SRCS})
+ADD_LIBRARY (Geometry OBJECT ${CXX_SRCS})

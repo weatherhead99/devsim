@@ -15,16 +15,9 @@ SET (CXX_SRCS2
     threadBaseClass.cc
 )
 
-INCLUDE_DIRECTORIES (
-    ../utility
-    ../pythonapi
-    ../commands
-    ../common_api
-    ${PYTHON_INCLUDE}
-)
+include_directories(${PYTHON_INCLUDE_DIR})
 
-
-ADD_LIBRARY (pythonapi_interpreter ${CXX_SRCS1})
-ADD_LIBRARY (pythonapi_api ${CXX_SRCS2})
+ADD_LIBRARY (pythonapi_interpreter SHARED ${CXX_SRCS1})
+ADD_LIBRARY (pythonapi_api SHARED ${CXX_SRCS2})
 
 

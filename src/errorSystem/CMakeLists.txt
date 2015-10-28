@@ -14,5 +14,5 @@ INCLUDE_DIRECTORIES (
   ../common_api
 )
 
-ADD_LIBRARY (errorSystem ${CXX_SRCS})
+ADD_LIBRARY (errorSystem OBJECT ${CXX_SRCS})
 
